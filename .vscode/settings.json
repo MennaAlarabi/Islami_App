@@ -1,0 +1,20 @@
+{
+    "flutterRunner.profiles": [
+        {
+            "name": "default",
+            "dartEntrypoint": "lib/main.dart",
+            "flavor": ""
+        },
+        {
+            "name": "most recently",
+            "dartEntrypoint": "lib/main.dart",
+            "flavor": ""
+        },
+        {
+            "name": "hadeeth",
+            "dartEntrypoint": "lib/main.dart",
+            "flavor": ""
+        }
+    ],
+    "flutterRunner.activeProfile": "hadeeth"
+}
