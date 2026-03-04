@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:islami/features/model/quran_sura_model.dart';
-import 'package:islami/features/navigation_bar/tabs/quran_tab/widgets/sura_content.dart';
+import 'package:islami/presentation/screens/Quran/cubit/most_recently_cubit.dart';
+import 'package:islami/presentation/screens/Quran/model/quran_sura_model.dart';
+import 'package:islami/presentation/screens/Quran/widgets/sura_content.dart';
 
 class SurasList extends StatelessWidget {
-  final VoidCallback? onSuraTapped;
   static final List<int> tappedSura = [];
-  SurasList({super.key, this.onSuraTapped});
+  const SurasList({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -14,16 +17,16 @@ class SurasList extends StatelessWidget {
       padding: EdgeInsets.zero,
       itemBuilder: (context, index) {
         return ListTile(
-          onTap: () {
+          onTap: () async {
             tappedSura.remove(index);
-            tappedSura.insert(0,index);
-            Navigator.push(
+            tappedSura.insert(0, index);
+            await Navigator.push(
               context,
               MaterialPageRoute(
                 builder: (context) => SuraContent(index: index + 1),
               ),
             );
-            if(onSuraTapped != null) onSuraTapped!();
+            BlocProvider.of<MostRecentlyCubit>(context).getAllSuras();
           },
           leading: Stack(
             alignment: AlignmentDirectional.center,
@@ -40,7 +43,7 @@ class SurasList extends StatelessWidget {
             ],
           ),
           title: Text(
-            '${QuranSurahModel.quranSurahs[index].englishName}',
+            QuranSurahModel.quranSurahs[index].englishName,
             style: TextStyle(
               color: Colors.white,
               fontSize: 20.sp,
@@ -56,7 +59,7 @@ class SurasList extends StatelessWidget {
             ),
           ),
           trailing: Text(
-            '${QuranSurahModel.quranSurahs[index].arabicName}',
+            QuranSurahModel.quranSurahs[index].arabicName,
             style: TextStyle(
               color: Colors.white,
               fontSize: 20.sp,

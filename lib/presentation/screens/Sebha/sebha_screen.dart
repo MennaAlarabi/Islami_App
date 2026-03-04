@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:islami/features/core/app_color.dart';
+import 'package:islami/constants/app_color.dart';
 
-class SebhaTab extends StatefulWidget {
-  const SebhaTab({super.key});
+class SebhaScreen extends StatefulWidget {
+  const SebhaScreen({super.key});
 
   @override
-  State<SebhaTab> createState() => _SebhaTabState();
+  State<SebhaScreen> createState() => _SebhaScreenState();
 }
 
-class _SebhaTabState extends State<SebhaTab> {
+class _SebhaScreenState extends State<SebhaScreen> {
   int counter = 0;
   List<String> zekr = ['سبحان الله', 'الحمد لله', 'الله اكبر'];
   int index = 0;

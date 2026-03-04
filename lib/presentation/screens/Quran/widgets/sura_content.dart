@@ -1,37 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:islami/features/core/app_color.dart';
-import 'package:islami/features/model/hadeth_title_model.dart';
+import 'package:islami/constants/app_color.dart';
+import 'package:islami/presentation/screens/Quran/model/quran_sura_model.dart';
 
-class HadethContent extends StatefulWidget {
+class SuraContent extends StatefulWidget {
   final int index;
-  final String data;
-  const HadethContent({
-    super.key, 
-    required this.index, 
-    required this.data
-  });
-
-  // static final routName = 'hadethContent';
+  const SuraContent({super.key, required this.index});
 
   @override
-  State<HadethContent> createState() => _HadethContentState();
+  State<SuraContent> createState() => _SuraContentState();
 }
 
-class _HadethContentState extends State<HadethContent> {
-  late final String? hadethNumber;
-  String? hadethData;
+class _SuraContentState extends State<SuraContent> {
+  late final String? suraName;
+  String? suraData;
+
+  _SuraContentState();
 
   @override
   void initState() {
     super.initState();
-      readHadeth();
-      hadethNumber = HadethTitleModel.hadeethNumberList[widget.index].title;
+    readSuraAyat(); // content
+    suraName = QuranSurahModel.quranSurahs[widget.index - 1].arabicName;
   }
 
-  Future readHadeth() async {
-    hadethData = widget.data;
-    // hadethData = await rootBundle.loadString('assets/files/Hadeeth/h${widget.index + 1}.txt');
+  Future readSuraAyat() async {
+    suraData = await rootBundle.loadString(
+      'assets/files/Suras/${widget.index}.txt',
+    );
     setState(() {});
   }
 
@@ -40,7 +37,7 @@ class _HadethContentState extends State<HadethContent> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          HadethTitleModel.hadeethNumberList[widget.index].title,
+          suraName!,
           style: TextStyle(
             fontSize: 20.sp,
             fontWeight: FontWeight.bold,
@@ -62,17 +59,18 @@ class _HadethContentState extends State<HadethContent> {
             padding: const EdgeInsets.only(
               top: 50,
               bottom: 100,
-              right: 60,
-              left: 60,
+              right: 20,
+              left: 20,
             ),
             child: SingleChildScrollView(
               child: Text(
                 textAlign: TextAlign.center,
-                hadethData ?? '',
+                suraData ?? '',
                 style: TextStyle(
                   color: AppColor.primaryColor,
                   fontWeight: FontWeight.bold,
                   fontSize: 20.sp,
+                  height: 2.h,
                 ),
               ),
             ),

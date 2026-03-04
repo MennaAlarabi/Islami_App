@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:islami/features/core/app_color.dart';
-import 'package:islami/features/navigation_bar/tabs/hadeth_tab/hadeth_tab.dart';
-import 'package:islami/features/navigation_bar/tabs/quran_tab/quran_tab.dart';
-import 'package:islami/features/navigation_bar/tabs/radio_tab/radio_tab.dart';
-import 'package:islami/features/navigation_bar/tabs/sepha_tab/sebha_tab.dart';
-import 'package:islami/features/navigation_bar/tabs/time_tab/time_tab.dart';
+import 'package:islami/constants/app_color.dart';
+import 'package:islami/presentation/screens/Hadeeth/hadeth_screen.dart';
+import 'package:islami/presentation/screens/Quran/quran_screen.dart';
+import 'package:islami/presentation/screens/Radio/radio_screen.dart';
+import 'package:islami/presentation/screens/Sebha/sebha_screen.dart';
+import 'package:islami/presentation/screens/Time/time_screen.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({super.key});
 
-  static final String routName = 'nav';
+  // static final String routName = 'nav';
 
   @override
   State<NavBar> createState() => _NavBarState();
@@ -27,11 +27,11 @@ class _NavBarState extends State<NavBar> {
     ];
 
     final List <Widget> pages = [
-      QuranTab(),
-      HadethTab(),
-      SebhaTab(),
-      RadioTab(),
-      TimeTab()
+      QuranScreen(),
+      HadethScreen(),
+      SebhaScreen(),
+      RadioScreen(),
+      TimeScreen()
     ];
 
   @override

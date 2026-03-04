@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:islami/features/core/app_color.dart';
+import 'package:islami/constants/app_color.dart';
 
-class RadioTab extends StatelessWidget {
-  const RadioTab({super.key});
+class RadioScreen extends StatelessWidget {
+  const RadioScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

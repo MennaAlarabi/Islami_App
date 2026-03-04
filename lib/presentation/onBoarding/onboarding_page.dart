@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:islami/features/navigation_bar/nav_bar.dart';
-import 'package:islami/features/onBoarding/footer.dart';
-import 'package:islami/features/onBoarding/onboarding_screen.dart';
+import 'package:islami/presentation/nav_bar.dart';
+import 'package:islami/presentation/onBoarding/footer.dart';
+import 'package:islami/presentation/onBoarding/onboarding_screen.dart';
 
 class OnBoardingPage extends StatelessWidget {
   const OnBoardingPage({Key? key}) : super(key: key);
@@ -80,7 +80,13 @@ class OnBoardingPage extends StatelessWidget {
       ),
 
       onDone: () {
-        Navigator.of(context).pushNamed(NavBar.routName);
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => NavBar(),
+          ),
+        );
+        ;
       },
     );
   }
