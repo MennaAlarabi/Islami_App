@@ -34,7 +34,8 @@ class HadethCard extends StatelessWidget {
               child: Column(
                 children: [
                   Text(
-                    HadethTitleModel.hadeethNumberList[index].title,
+                    HadethTitleModel.hadeethNumberList[index].arabicTitle,
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 24.sp,
                       fontWeight: FontWeight.bold,

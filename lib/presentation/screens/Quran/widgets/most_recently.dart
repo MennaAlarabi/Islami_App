@@ -1,15 +1,14 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:islami/constants/app_color.dart';
-import 'package:islami/presentation/screens/Quran/cubit/most_recently_cubit.dart';
+import 'package:islami/presentation/screens/Quran/manager/most_recently/cubit/most_recently_cubit.dart';
 import 'package:islami/presentation/screens/Quran/model/quran_sura_model.dart';
 import 'package:islami/presentation/screens/Quran/widgets/sura_content.dart';
 import 'package:islami/presentation/screens/Quran/widgets/suras_list.dart';
 
 class MostRecently extends StatelessWidget {
-  MostRecently({super.key});
+  const MostRecently({super.key});
 
   @override
   Widget build(BuildContext context) {

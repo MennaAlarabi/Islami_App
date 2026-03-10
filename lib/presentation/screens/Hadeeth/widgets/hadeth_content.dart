@@ -13,14 +13,16 @@ class HadethContent extends StatefulWidget {
 }
 
 class _HadethContentState extends State<HadethContent> {
-  late final String? hadethNumber;
+  late final String? hadethArTitel;
+  late final String? hadethEnTitel;
   String? hadethData;
 
   @override
   void initState() {
     super.initState();
     readHadeth();
-    hadethNumber = HadethTitleModel.hadeethNumberList[widget.index].title;
+    hadethArTitel = HadethTitleModel.hadeethNumberList[widget.index].arabicTitle;
+    hadethEnTitel = HadethTitleModel.hadeethNumberList[widget.index].englishTitle;
   }
 
   Future readHadeth() async {
@@ -33,7 +35,7 @@ class _HadethContentState extends State<HadethContent> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          HadethTitleModel.hadeethNumberList[widget.index].title,
+          hadethEnTitel!,
           style: TextStyle(
             fontSize: 20.sp,
             fontWeight: FontWeight.bold,
@@ -61,7 +63,7 @@ class _HadethContentState extends State<HadethContent> {
               child: Column(
                 children: [
                   Text(
-                    HadethTitleModel.hadeethNumberList[widget.index].title,
+                    hadethArTitel!,
                     style: TextStyle(
                       fontSize: 24.sp,
                       fontWeight: FontWeight.bold,

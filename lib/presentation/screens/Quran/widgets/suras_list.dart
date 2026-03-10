@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:islami/presentation/screens/Quran/cubit/most_recently_cubit.dart';
+import 'package:islami/presentation/screens/Quran/manager/most_recently/cubit/most_recently_cubit.dart';
 import 'package:islami/presentation/screens/Quran/model/quran_sura_model.dart';
 import 'package:islami/presentation/screens/Quran/widgets/sura_content.dart';
 
 class SurasList extends StatelessWidget {
   static final List<int> tappedSura = [];
-  const SurasList({
-    super.key,
-  });
+  final List<QuranSurahModel> suras;
+  const SurasList({super.key, required this.suras});
 
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
       padding: EdgeInsets.zero,
       itemBuilder: (context, index) {
+        final sura = suras[index];
         return ListTile(
           onTap: () async {
             tappedSura.remove(index);
@@ -43,7 +43,7 @@ class SurasList extends StatelessWidget {
             ],
           ),
           title: Text(
-            QuranSurahModel.quranSurahs[index].englishName,
+            sura.englishName,
             style: TextStyle(
               color: Colors.white,
               fontSize: 20.sp,
@@ -51,7 +51,7 @@ class SurasList extends StatelessWidget {
             ),
           ),
           subtitle: Text(
-            '${QuranSurahModel.quranSurahs[index].verses} Verses',
+            '${sura.verses} Verses',
             style: TextStyle(
               color: Colors.white,
               fontSize: 14.sp,
@@ -59,7 +59,7 @@ class SurasList extends StatelessWidget {
             ),
           ),
           trailing: Text(
-            QuranSurahModel.quranSurahs[index].arabicName,
+            sura.arabicName,
             style: TextStyle(
               color: Colors.white,
               fontSize: 20.sp,
@@ -70,7 +70,7 @@ class SurasList extends StatelessWidget {
       },
       separatorBuilder: (context, index) =>
           Divider(indent: 60.w, endIndent: 60.w),
-      itemCount: 114,
+      itemCount: suras.length,
     );
   }
 }

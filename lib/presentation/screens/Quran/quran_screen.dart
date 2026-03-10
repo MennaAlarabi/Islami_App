@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:islami/presentation/screens/Quran/cubit/most_recently_cubit.dart';
+import 'package:islami/presentation/screens/Quran/manager/most_recently/cubit/most_recently_cubit.dart';
+import 'package:islami/presentation/screens/Quran/manager/sura_search/cubit/sura_search_cubit.dart';
+import 'package:islami/presentation/screens/Quran/model/quran_sura_model.dart';
 import 'package:islami/presentation/screens/Quran/widgets/most_recently.dart';
 import 'package:islami/presentation/screens/Quran/widgets/sura_search.dart';
 import 'package:islami/presentation/screens/Quran/widgets/suras_list.dart';
@@ -11,9 +13,12 @@ class QuranScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => MostRecentlyCubit()..getAllSuras(),
-      child: Container(
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => MostRecentlyCubit()..getAllSuras()),
+        BlocProvider(create: (context) => SuraSearchCubit()),
+      ],
+      child: SizedBox(
         width: double.infinity.w,
         child: Padding(
           padding: EdgeInsets.only(left: 20.w, right: 20.w),
@@ -23,7 +28,15 @@ class QuranScreen extends StatelessWidget {
               SizedBox(height: 192.h),
               SuraSearch(),
               SizedBox(height: 20.h),
-              MostRecently(),
+              BlocBuilder<SuraSearchCubit, SuraSearchState>(
+                builder: (context, state) {
+                  final suras = (state as SuraSearchLoaded).suras;
+                  final isSearching =
+                      suras.length != QuranSurahModel.quranSurahs.length;
+                  if (isSearching) return SizedBox();
+                  return MostRecently();
+                },
+              ),
               SizedBox(height: 10.h),
               Text(
                 'Suras List',
@@ -34,7 +47,14 @@ class QuranScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 10.h),
-              Expanded(child: SurasList()),
+              Expanded(
+                child: BlocBuilder<SuraSearchCubit, SuraSearchState>(
+                  builder: (context, state) {
+                    final suras = (state as SuraSearchLoaded).suras;
+                    return SurasList(suras: suras);
+                  },
+                ),
+              ),
             ],
           ),
         ),
