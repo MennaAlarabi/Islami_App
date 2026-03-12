@@ -79,14 +79,12 @@ class OnBoardingPage extends StatelessWidget {
         ),
       ),
 
-      onDone: () {
-        Navigator.push(
+onDone: () {
+        Navigator.pushAndRemoveUntil(
           context,
-          MaterialPageRoute(
-            builder: (context) => NavBar(),
-          ),
+          MaterialPageRoute(builder: (context) => NavBar()),
+          (route) => false,
         );
-        ;
       },
     );
   }

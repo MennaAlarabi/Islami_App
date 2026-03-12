@@ -5,20 +5,29 @@ import 'package:meta/meta.dart';
 part 'sura_search_state.dart';
 
 class SuraSearchCubit extends Cubit<SuraSearchState> {
-  SuraSearchCubit() : super(SuraSearchLoaded(QuranSurahModel.quranSurahs));
+  SuraSearchCubit() : super(SuraSearchLoaded(QuranSuraModel.quranSuras));
 
   void getSearchedSuras(String search) {
+    // * searchController
     if (search.isEmpty) {
-      emit(SuraSearchLoaded(QuranSurahModel.quranSurahs));
+      // ! no searching
+      emit(
+        SuraSearchLoaded(QuranSuraModel.quranSuras),
+      ); // * all sura list - suras (initlized in SuraSearchLoaded) = quranSuras
     } else {
+      // ? searching - suras (initlized in SuraSearchLoaded) = filtering quranSuras
       emit(
         SuraSearchLoaded(
-          QuranSurahModel.quranSurahs
+          QuranSuraModel
+              .quranSuras // * elements that contains ...?
               .where(
+                // * iterable can't return List
                 (sura) =>
-                    sura.arabicName.contains(search) ||
-                    sura.englishName.toLowerCase().contains(search) ||
-                    sura.verses.toString().contains(search),
+                    sura.arabicName.contains(search) || // * الفاتحه
+                    sura.englishName.toLowerCase().contains(
+                      search,
+                    ) || // * Fitiha or fatiha
+                    sura.verses.toString().contains(search), // * 7
               )
               .toList(),
         ),

@@ -6,6 +6,6 @@ sealed class SuraSearchState {}
 final class SuraSearchInitial extends SuraSearchState {}
 
 final class SuraSearchLoaded extends SuraSearchState {
-  final List<QuranSurahModel> suras;
+  final List<QuranSuraModel> suras;
   SuraSearchLoaded(this.suras);
 }

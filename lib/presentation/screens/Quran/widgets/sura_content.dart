@@ -22,7 +22,7 @@ class _SuraContentState extends State<SuraContent> {
   void initState() {
     super.initState();
     readSuraAyat(); // content
-    suraName = QuranSurahModel.quranSurahs[widget.index - 1].arabicName;
+    suraName = QuranSuraModel.quranSuras[widget.index - 1].arabicName;
   }
 
   Future readSuraAyat() async {

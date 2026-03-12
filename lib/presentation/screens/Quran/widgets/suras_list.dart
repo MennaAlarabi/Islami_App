@@ -6,8 +6,8 @@ import 'package:islami/presentation/screens/Quran/model/quran_sura_model.dart';
 import 'package:islami/presentation/screens/Quran/widgets/sura_content.dart';
 
 class SurasList extends StatelessWidget {
-  static final List<int> tappedSura = [];
-  final List<QuranSurahModel> suras;
+  static final List<int> tappedSura = []; // * holding sura index
+  final List<QuranSuraModel> suras;
   const SurasList({super.key, required this.suras});
 
   @override
@@ -18,15 +18,17 @@ class SurasList extends StatelessWidget {
         final sura = suras[index];
         return ListTile(
           onTap: () async {
-            tappedSura.remove(index);
-            tappedSura.insert(0, index);
+            tappedSura.remove(sura.index);
+            tappedSura.insert(0, sura.index);
             await Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => SuraContent(index: index + 1),
+                builder: (context) => SuraContent(index: sura.index + 1),
               ),
             );
-            BlocProvider.of<MostRecentlyCubit>(context).getAllSuras();
+            BlocProvider.of<MostRecentlyCubit>(
+              context,
+            ).getAllSuras(); // * Alooo, wake up, there is a change
           },
           leading: Stack(
             alignment: AlignmentDirectional.center,

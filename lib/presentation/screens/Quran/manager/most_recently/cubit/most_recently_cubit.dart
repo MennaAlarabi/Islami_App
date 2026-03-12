@@ -8,7 +8,9 @@ class MostRecentlyCubit extends Cubit<MostRecentlyState> {
   MostRecentlyCubit() : super(MostRecentlyInitial());
 
   void getAllSuras() {
-    final newList = List<int>.from(SurasList.tappedSura);
+    final newList = List<int>.from(
+      SurasList.tappedSura,
+    ); // * Copy of tappedSuar List
     emit(MostRecentlyLoaded(tappedSuras: newList));
   }
 }

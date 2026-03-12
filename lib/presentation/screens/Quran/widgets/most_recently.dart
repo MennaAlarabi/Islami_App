@@ -14,11 +14,15 @@ class MostRecently extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<MostRecentlyCubit, MostRecentlyState>(
       builder: (context, state) {
+        // * scope of UI Rebuilding
         if (state is MostRecentlyLoaded) {
+          final suras = QuranSuraModel.quranSuras;
           if (state.tappedSuras.isEmpty) {
-            return SizedBox(width: 150.w);
+            // * No tapped suras
+            return SizedBox();
           }
           return Column(
+            // * Tapped sura
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
@@ -63,19 +67,19 @@ class MostRecently extends StatelessWidget {
                           );
                           BlocProvider.of<MostRecentlyCubit>(
                             context,
-                          ).getAllSuras();
+                          ).getAllSuras(); // * Alooo, wake up, there is a change
                         },
                         child: Row(
                           children: [
                             Column(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceAround,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 Text(
-                                  QuranSurahModel
-                                      .quranSurahs[SurasList
-                                          .tappedSura[index]]
-                                      .englishName,
+                                  suras[SurasList.tappedSura[index]].englishName,
+                                  // QuranSuraModel
+                                  //     .quranSuras[SurasList
+                                  //         .tappedSura[index]]
+                                  //     .englishName,
                                   style: TextStyle(
                                     fontSize: 24.sp,
                                     fontWeight: FontWeight.bold,
@@ -83,10 +87,7 @@ class MostRecently extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                  QuranSurahModel
-                                      .quranSurahs[SurasList
-                                          .tappedSura[index]]
-                                      .arabicName,
+                                  suras[state.tappedSuras[index]].arabicName,
                                   style: TextStyle(
                                     fontSize: 24.sp,
                                     fontWeight: FontWeight.bold,
@@ -94,7 +95,7 @@ class MostRecently extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                  '${QuranSurahModel.quranSurahs[SurasList.tappedSura[index]].verses} Verses',
+                                  '${suras[state.tappedSuras[index]].verses} Verses',
                                   style: TextStyle(
                                     fontSize: 14.sp,
                                     fontWeight: FontWeight.bold,
