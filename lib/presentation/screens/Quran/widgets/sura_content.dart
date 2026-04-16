@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:islami/constants/app_color.dart';
-import 'package:islami/presentation/screens/Quran/model/quran_sura_model.dart';
+import 'package:islami/presentation/screens/quran/model/quran_sura_model.dart';
 
 class SuraContent extends StatefulWidget {
   final int index;

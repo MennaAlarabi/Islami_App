@@ -10,7 +10,7 @@ void main() {
 
 class IslamiApp extends StatelessWidget {
   AppRouter appRouter;
-  IslamiApp({Key? key, required this.appRouter}) : super(key: key);
+  IslamiApp({super.key, required this.appRouter});
 
   @override
   Widget build(BuildContext context) {

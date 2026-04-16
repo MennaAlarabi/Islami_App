@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:islami/presentation/screens/Quran/manager/most_recently/cubit/most_recently_cubit.dart';
-import 'package:islami/presentation/screens/Quran/model/quran_sura_model.dart';
-import 'package:islami/presentation/screens/Quran/widgets/sura_content.dart';
+import 'package:islami/buisness_logic/quran/cubit/most_recently_cubit.dart';
+import 'package:islami/presentation/screens/quran/model/quran_sura_model.dart';
+import 'package:islami/presentation/screens/quran/widgets/sura_content.dart';
 
 class SurasList extends StatelessWidget {
   static final List<int> tappedSura = []; // * holding sura index

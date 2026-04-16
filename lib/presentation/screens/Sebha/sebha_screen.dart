@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:islami/constants/app_color.dart';
 
 class SebhaScreen extends StatefulWidget {
   const SebhaScreen({super.key});
@@ -16,7 +15,7 @@ class _SebhaScreenState extends State<SebhaScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: Padding(
         padding: EdgeInsets.only(left: 26.w, right: 26.w),
@@ -39,8 +38,9 @@ class _SebhaScreenState extends State<SebhaScreen> {
                   counter = 0;
                   if (index == 2) {
                     index = 0;
-                  } else
+                  } else {
                     index++;
+                  }
                 }
                 setState(() {});
               },

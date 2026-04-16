@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:islami/constants/app_color.dart';
-import 'package:islami/presentation/screens/Hadeeth/model/hadeth_title_model.dart';
+import 'package:islami/presentation/screens/hadeeth/model/hadeth_title_model.dart';
 
 class HadethContent extends StatefulWidget {
   final int index;

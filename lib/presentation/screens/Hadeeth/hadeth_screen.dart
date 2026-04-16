@@ -2,8 +2,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:islami/presentation/screens/Hadeeth/widgets/hadeth_card.dart';
-import 'package:islami/presentation/screens/Hadeeth/widgets/hadeth_content.dart';
+import 'package:islami/presentation/screens/hadeeth/widgets/hadeth_card.dart';
+import 'package:islami/presentation/screens/hadeeth/widgets/hadeth_content.dart';
 
 class HadethScreen extends StatelessWidget {
   const HadethScreen({super.key});

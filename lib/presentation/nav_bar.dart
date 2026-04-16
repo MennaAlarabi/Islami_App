@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:islami/constants/app_color.dart';
-import 'package:islami/presentation/screens/Hadeeth/hadeth_screen.dart';
-import 'package:islami/presentation/screens/Quran/quran_screen.dart';
-import 'package:islami/presentation/screens/Radio/radio_screen.dart';
-import 'package:islami/presentation/screens/Sebha/sebha_screen.dart';
-import 'package:islami/presentation/screens/Time/time_screen.dart';
+import 'package:islami/presentation/screens/hadeeth/hadeth_screen.dart';
+import 'package:islami/presentation/screens/quran/quran_screen.dart';
+import 'package:islami/presentation/screens/radio/radio_screen.dart';
+import 'package:islami/presentation/screens/sebha/sebha_screen.dart';
+import 'package:islami/presentation/screens/time/time_screen.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({super.key});
@@ -56,7 +56,7 @@ class _NavBarState extends State<NavBar> {
             pages[currentindex]
           ]
         ),
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
         height: 80.h,
         child: BottomNavigationBar(
           backgroundColor: AppColor.primaryColor,

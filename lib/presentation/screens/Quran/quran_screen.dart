@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:islami/presentation/screens/Quran/manager/most_recently/cubit/most_recently_cubit.dart';
-import 'package:islami/presentation/screens/Quran/manager/sura_search/cubit/sura_search_cubit.dart';
-import 'package:islami/presentation/screens/Quran/model/quran_sura_model.dart';
-import 'package:islami/presentation/screens/Quran/widgets/most_recently.dart';
-import 'package:islami/presentation/screens/Quran/widgets/sura_search.dart';
-import 'package:islami/presentation/screens/Quran/widgets/suras_list.dart';
+import 'package:islami/buisness_logic/quran/cubit/most_recently_cubit.dart';
+import 'package:islami/buisness_logic/quran/cubit/sura_search_cubit.dart';
+import 'package:islami/buisness_logic/quran/cubit/sura_search_state.dart';
+import 'package:islami/presentation/screens/quran/model/quran_sura_model.dart';
+import 'package:islami/presentation/screens/quran/widgets/most_recently.dart';
+import 'package:islami/presentation/screens/quran/widgets/sura_search.dart';
+import 'package:islami/presentation/screens/quran/widgets/suras_list.dart';
 
 class QuranScreen extends StatelessWidget {
   const QuranScreen({super.key});

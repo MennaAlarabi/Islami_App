@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:islami/presentation/screens/Quran/widgets/suras_list.dart';
+import 'package:islami/presentation/screens/quran/widgets/suras_list.dart';
 import 'package:meta/meta.dart';
 
 part 'most_recently_state.dart';

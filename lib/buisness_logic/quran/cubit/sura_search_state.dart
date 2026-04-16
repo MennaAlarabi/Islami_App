@@ -1,6 +1,6 @@
-part of 'sura_search_cubit.dart';
+import 'package:islami/presentation/screens/quran/model/quran_sura_model.dart';
 
-@immutable
+
 sealed class SuraSearchState {}
 
 final class SuraSearchInitial extends SuraSearchState {}

@@ -1,8 +1,7 @@
 import 'package:bloc/bloc.dart';
-import 'package:islami/presentation/screens/Quran/model/quran_sura_model.dart';
-import 'package:meta/meta.dart';
+import 'package:islami/buisness_logic/quran/cubit/sura_search_state.dart';
+import 'package:islami/presentation/screens/quran/model/quran_sura_model.dart';
 
-part 'sura_search_state.dart';
 
 class SuraSearchCubit extends Cubit<SuraSearchState> {
   SuraSearchCubit() : super(SuraSearchLoaded(QuranSuraModel.quranSuras));
