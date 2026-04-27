@@ -24,7 +24,7 @@ class RadioList extends StatelessWidget {
               return Container(
                 height: 133.h,
                 width: 390.w,
-                margin: EdgeInsets.only(top: 10.h),
+                margin: EdgeInsets.only(bottom: 10.h),
                 decoration: BoxDecoration(
                   color: AppColor.primaryColor,
                   borderRadius: BorderRadius.circular(20.r),
@@ -113,3 +113,4 @@ class RadioList extends StatelessWidget {
     );
   }
 }
+

@@ -3,6 +3,7 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:islami/data/model/radio/radio_model.dart';
 import 'package:islami/data/repository/radio/radio_repo.dart';
+import 'package:islami/networking/api_error_handler.dart';
 import 'package:meta/meta.dart';
 part 'radio_state.dart';
 
@@ -27,7 +28,7 @@ class RadioCubit extends Cubit<RadioState> {
         ),
       );
     } catch (e) {
-      emit(RadioFailedState(e.toString()));
+      emit(RadioFailedState(ApiErrorHandler.handle(e)));
     }
   }
 

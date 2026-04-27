@@ -1,29 +1,11 @@
-class RecitersModel {
-  List<Reciter> reciters;
+class ReciterModel {
+  final int id;
+  final String name;
+  final String letter;
+  final String date;
+  final List<Moshaf> moshaf;
 
-  RecitersModel({required this.reciters});
-
-  factory RecitersModel.fromJson(Map<String, dynamic> json) {
-    return RecitersModel(
-      reciters: List<Reciter>.from(
-        json['reciters'].map((x) => Reciter.fromJson(x)),
-      ),
-    );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {'reciters': reciters.map((x) => x.toJson()).toList()};
-  }
-}
-
-class Reciter {
-  int id;
-  String name;
-  String letter;
-  String date;
-  List<Moshaf> moshaf;
-
-  Reciter({
+  ReciterModel({
     required this.id,
     required this.name,
     required this.letter,
@@ -31,15 +13,15 @@ class Reciter {
     required this.moshaf,
   });
 
-  factory Reciter.fromJson(Map<String, dynamic> json) {
-    return Reciter(
-      id: json['id'],
-      name: json['name'],
-      letter: json['letter'],
-      date: json['date'],
-      moshaf: List<Moshaf>.from(
-        (json['moshaf'] ?? []).map((x) => Moshaf.fromJson(x)),
-      ),
+  factory ReciterModel.fromJson(Map<String, dynamic> json) {
+    return ReciterModel(
+      id: json['id'] ?? 0,
+      name: json['name'] ?? '',
+      letter: json['letter'] ?? '',
+      date: json['date'] ?? '',
+      moshaf:
+          (json['moshaf'] as List?)?.map((e) => Moshaf.fromJson(e)).toList() ??
+          [],
     );
   }
 
@@ -49,19 +31,19 @@ class Reciter {
       'name': name,
       'letter': letter,
       'date': date,
-      'moshaf': moshaf.map((x) => x.toJson()).toList(),
+      'moshaf': moshaf.map((e) => e.toJson()).toList(),
     };
   }
 }
 
 class Moshaf {
-  int id;
-  String name;
-  int rewayaId;
-  String? server;
-  int? surahTotal;
-  int? moshafType;
-  String? surahList;
+  final int id;
+  final String name;
+  final int rewayaId;
+  final String? server;
+  final int? surahTotal;
+  final int? moshafType;
+  final String? surahList;
 
   Moshaf({
     required this.id,
@@ -75,9 +57,9 @@ class Moshaf {
 
   factory Moshaf.fromJson(Map<String, dynamic> json) {
     return Moshaf(
-      id: json['id'],
-      name: json['name'],
-      rewayaId: json['rewaya_id'],
+      id: json['id'] ?? 0,
+      name: json['name'] ?? '',
+      rewayaId: json['rewaya_id'] ?? 0,
       server: json['server'],
       surahTotal: json['surah_total'],
       moshafType: json['moshaf_type'],

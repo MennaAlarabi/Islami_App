@@ -2,10 +2,10 @@ import 'dart:developer';
 
 import 'package:dio/dio.dart';
 import 'package:islami/constants/strings.dart';
-//* to recieve the data -> we used web services that deal with api
+import 'package:islami/networking/api_error_handler.dart';
 
 class RadioWebServices {
-  late Dio dio; //* object of Dio
+  late Dio dio;
 
   RadioWebServices() {
     BaseOptions options = BaseOptions(
@@ -17,12 +17,12 @@ class RadioWebServices {
     dio = Dio(options);
   }
 
-  Future<Map<String, dynamic>> getRadioAudios() async { //! return api data (radio audios)
+  Future<Map<String, dynamic>> getRadioAudios() async {
     try {
-      Response response = await dio.get('radios?language=en'); //* recieve api data using dio.get
+      Response response = await dio.get('radios?language=en');
       return response.data;
     } on Exception catch (e) {
-      log(e.toString());
+      log(ApiErrorHandler.handle(e));
       return {};
     }
   }
