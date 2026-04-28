@@ -4,7 +4,7 @@ class QuranSuraModel {
   final int verses;
   final int index;
 
-  QuranSuraModel.QuranSurahModel({
+  QuranSuraModel.quranSurahModel({
     required this.arabicName,
     required this.englishName,
     required this.verses,
@@ -12,685 +12,685 @@ class QuranSuraModel {
   });
 
   static List<QuranSuraModel> quranSuras = [
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الفاتحة",
       englishName: "Al-Fatihah",
       verses: 7,
       index: 0,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "البقرة",
       englishName: "Al-Baqarah",
       verses: 286,
       index: 1,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "آل عمران",
       englishName: "Aal-E-Imran",
       verses: 200,
       index: 2,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "النساء",
       englishName: "An-Nisa",
       verses: 176,
       index: 3,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "المائدة",
       englishName: "Al-Ma'idah",
       verses: 120,
       index: 4,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الأنعام",
       englishName: "Al-An'am",
       verses: 165,
       index: 5,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الأعراف",
       englishName: "Al-A'raf",
       verses: 206,
       index: 6,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الأنفال",
       englishName: "Al-Anfal",
       verses: 75,
       index: 7,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "التوبة",
       englishName: "At-Tawbah",
       verses: 129,
       index: 8,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "يونس",
       englishName: "Yunus",
       verses: 109,
       index: 9,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "هود",
       englishName: "Hud",
       verses: 123,
       index: 10,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "يوسف",
       englishName: "Yusuf",
       verses: 111,
       index: 11,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الرعد",
       englishName: "Ar-Ra'd",
       verses: 43,
       index: 12,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "إبراهيم",
       englishName: "Ibrahim",
       verses: 52,
       index: 13,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الحجر",
       englishName: "Al-Hijr",
       verses: 99,
       index: 14,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "النحل",
       englishName: "An-Nahl",
       verses: 128,
       index: 15,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الإسراء",
       englishName: "Al-Isra",
       verses: 111,
       index: 16,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الكهف",
       englishName: "Al-Kahf",
       verses: 110,
       index: 17,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "مريم",
       englishName: "Maryam",
       verses: 98,
       index: 18,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "طه",
       englishName: "Ta‑Ha",
       verses: 135,
       index: 19,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الأنبياء",
       englishName: "Al‑Anbiya",
       verses: 112,
       index: 20,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الحج",
       englishName: "Al‑Hajj",
       verses: 78,
       index: 21,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "المؤمنون",
       englishName: "Al‑Mu’minun",
       verses: 118,
       index: 22,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "النور",
       englishName: "An‑Nur",
       verses: 64,
       index: 23,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الفرقان",
       englishName: "Al‑Furqan",
       verses: 77,
       index: 24,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الشعراء",
       englishName: "Ash‑Shu’ara",
       verses: 227,
       index: 25,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "النمل",
       englishName: "An‑Naml",
       verses: 93,
       index: 26,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "القصص",
       englishName: "Al‑Qasas",
       verses: 88,
       index: 27,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "العنكبوت",
       englishName: "Al‑Ankabut",
       verses: 69,
       index: 28,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الروم",
       englishName: "Ar‑Rum",
       verses: 60,
       index: 29,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "لقمان",
       englishName: "Luqman",
       verses: 34,
       index: 30,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "السجدة",
       englishName: "As‑Sajda",
       verses: 30,
       index: 31,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الأحزاب",
       englishName: "Al‑Ahzab",
       verses: 73,
       index: 32,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "سبأ",
       englishName: "Saba",
       verses: 54,
       index: 33,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "فاطر",
       englishName: "Fatir",
       verses: 45,
       index: 34,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "يس",
       englishName: "Ya‑Sin",
       verses: 83,
       index: 35,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الصافات",
       englishName: "As‑Saffat",
       verses: 182,
       index: 36,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "ص",
       englishName: "Sad",
       verses: 88,
       index: 37,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الزمر",
       englishName: "Az‑Zumar",
       verses: 75,
       index: 38,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "غافر",
       englishName: "Ghafir",
       verses: 85,
       index: 39,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "فصلت",
       englishName: "Fussilat",
       verses: 54,
       index: 40,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الشورى",
       englishName: "Ash‑Shura",
       verses: 53,
       index: 41,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الزخرف",
       englishName: "Az‑Zukhruf",
       verses: 89,
       index: 42,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الدخان",
       englishName: "Ad‑Dukhan",
       verses: 59,
       index: 43,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الجاثية",
       englishName: "Al‑Jathiya",
       verses: 37,
       index: 44,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الأحقاف",
       englishName: "Al‑Ahqaf",
       verses: 35,
       index: 45,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "محمد",
       englishName: "Muhammad",
       verses: 38,
       index: 46,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الفتح",
       englishName: "Al‑Fath",
       verses: 29,
       index: 47,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الحجرات",
       englishName: "Al‑Hujurat",
       verses: 18,
       index: 48,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "ق",
       englishName: "Qaf",
       verses: 45,
       index: 49,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الذاريات",
       englishName: "Adh‑Dhariyat",
       verses: 60,
       index: 50,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الطور",
       englishName: "At‑Tur",
       verses: 49,
       index: 51,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "النجم",
       englishName: "An‑Najm",
       verses: 62,
       index: 52,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "القمر",
       englishName: "Al‑Qamar",
       verses: 55,
       index: 53,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الرحمن",
       englishName: "Ar‑Rahman",
       verses: 78,
       index: 54,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الواقعة",
       englishName: "Al‑Waqia",
       verses: 96,
       index: 55,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الحديد",
       englishName: "Al‑Hadid",
       verses: 29,
       index: 56,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "المجادلة",
       englishName: "Al‑Mujadila",
       verses: 22,
       index: 57,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الحشر",
       englishName: "Al‑Hashr",
       verses: 24,
       index: 58,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الممتحنة",
       englishName: "Al‑Mumtahina",
       verses: 13,
       index: 59,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الصف",
       englishName: "As‑Saff",
       verses: 14,
       index: 60,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الجمعة",
       englishName: "Al‑Jumu’a",
       verses: 11,
       index: 61,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "المنافقون",
       englishName: "Al‑Munafiqun",
       verses: 11,
       index: 62,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "التغابن",
       englishName: "At‑Taghabun",
       verses: 18,
       index: 63,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الطلاق",
       englishName: "At‑Talaq",
       verses: 12,
       index: 64,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "التحريم",
       englishName: "At‑Tahrim",
       verses: 12,
       index: 65,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الملك",
       englishName: "Al‑Mulk",
       verses: 30,
       index: 66,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "القلم",
       englishName: "Al‑Qalam",
       verses: 52,
       index: 67,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الحاقة",
       englishName: "Al‑Haqqa",
       verses: 52,
       index: 68,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "المعارج",
       englishName: "Al‑Ma’arij",
       verses: 44,
       index: 69,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "نوح",
       englishName: "Nuh",
       verses: 28,
       index: 70,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الجن",
       englishName: "Al‑Jinn",
       verses: 28,
       index: 71,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "المزمل",
       englishName: "Al‑Muzzammil",
       verses: 20,
       index: 72,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "المدثر",
       englishName: "Al‑Muddaththir",
       verses: 56,
       index: 73,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "القيامة",
       englishName: "Al‑Qiyama",
       verses: 40,
       index: 74,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الانسان",
       englishName: "Al‑Insan",
       verses: 31,
       index: 75,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "المرسلات",
       englishName: "Al‑Mursalat",
       verses: 50,
       index: 76,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "النبأ",
       englishName: "An‑Naba",
       verses: 40,
       index: 77,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "النازعات",
       englishName: "An‑Nazi’at",
       verses: 46,
       index: 78,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "عبس",
       englishName: "Abasa",
       verses: 42,
       index: 79,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "التكوير",
       englishName: "At‑Takwir",
       verses: 29,
       index: 80,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الإنفطار",
       englishName: "Al‑Infitar",
       verses: 19,
       index: 81,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "المطففين",
       englishName: "Al‑Mutaffifin",
       verses: 36,
       index: 82,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الإنشقاق",
       englishName: "Al‑Inshiqaq",
       verses: 25,
       index: 83,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "البروج",
       englishName: "Al‑Buruj",
       verses: 22,
       index: 84,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الطارق",
       englishName: "At‑Tariq",
       verses: 17,
       index: 85,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الأعلى",
       englishName: "Al‑Ala",
       verses: 19,
       index: 86,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الغاشية",
       englishName: "Al‑Ghashiya",
       verses: 26,
       index: 87,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الفجر",
       englishName: "Al‑Fajr",
       verses: 30,
       index: 88,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "البلد",
       englishName: "Al‑Balad",
       verses: 20,
       index: 89,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الشمس",
       englishName: "Ash‑Shams",
       verses: 15,
       index: 90,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الليل",
       englishName: "Al‑Lail",
       verses: 21,
       index: 91,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الضحى",
       englishName: "Ad‑Duhaa",
       verses: 11,
       index: 92,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الشرح",
       englishName: "Ash‑Sharh",
       verses: 8,
       index: 93,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "التين",
       englishName: "At‑Tin",
       verses: 8,
       index: 94,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "العلق",
       englishName: "Al‑Alaq",
       verses: 19,
       index: 95,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "القدر",
       englishName: "Al‑Qadr",
       verses: 5,
       index: 96,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "البينة",
       englishName: "Al‑Bayyina",
       verses: 8,
       index: 97,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الزلزلة",
       englishName: "Az‑Zalzala",
       verses: 8,
       index: 98,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "العاديات",
       englishName: "Al‑Adiyat",
       verses: 11,
       index: 99,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "القارعة",
       englishName: "Al‑Qari’a",
       verses: 11,
       index: 100,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "التكاثر",
       englishName: "At‑Takathur",
       verses: 8,
       index: 101,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "العصر",
       englishName: "Al‑Asr",
       verses: 3,
       index: 102,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الهمزة",
       englishName: "Al‑Humazah",
       verses: 9,
       index: 103,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الفيل",
       englishName: "Al‑Fil",
       verses: 5,
       index: 104,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "قريش",
       englishName: "Quraish",
       verses: 4,
       index: 105,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الماعون",
       englishName: "Al‑Maun",
       verses: 7,
       index: 106,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الكوثر",
       englishName: "Al‑Kawthar",
       verses: 3,
       index: 107,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الكافرون",
       englishName: "Al‑Kafirun",
       verses: 6,
       index: 108,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "النصر",
       englishName: "An‑Nasr",
       verses: 3,
       index: 109,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "المسد",
       englishName: "Al‑Masadd",
       verses: 5,
       index: 110,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الإخلاص",
       englishName: "Al‑Ikhlas",
       verses: 4,
       index: 111,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الفلق",
       englishName: "Al‑Falaq",
       verses: 5,
       index: 112,
     ),
-    QuranSuraModel.QuranSurahModel(
+    QuranSuraModel.quranSurahModel(
       arabicName: "الناس",
       englishName: "An‑Nas",
       verses: 6,

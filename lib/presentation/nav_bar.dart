@@ -108,8 +108,8 @@ Container buildActiveNavIcon(String icon){
     width: 59.w,
     height: 34.h,
     decoration: BoxDecoration(
-      color: Color(0xff202020).withOpacity(0.6),
-      borderRadius: BorderRadius.circular(66)
+      color: Color(0xff202020).withValues(alpha: 0.6),
+      borderRadius: BorderRadius.circular(66.r)
     ),
     child: Image.asset(
       icon,
