@@ -62,6 +62,7 @@ flutter:
     - assets/images/onboarding/
     - assets/images/iconss/
     - assets/images/background/
+    - assets/screenshots/
     - assets/files/Suras/
     - assets/files/Hadeeth/
   #   - images/a_dot_ham.jpeg
