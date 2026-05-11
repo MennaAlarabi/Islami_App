@@ -21,7 +21,7 @@ class _SuraContentState extends State<SuraContent> {
   @override
   void initState() {
     super.initState();
-    readSuraAyat(); // content
+    readSuraAyat();
     suraName = QuranSuraModel.quranSuras[widget.index - 1].arabicName;
   }
 

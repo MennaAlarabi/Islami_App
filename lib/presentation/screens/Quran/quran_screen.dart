@@ -27,29 +27,20 @@ class QuranScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 192.h),
-              // * impact on sura list & most recently - rebuilding for sura list (BlocBuilder) depends on search text
               SuraSearch(),
               SizedBox(height: 20.h),
-              /*
-                 2 state ? searching : no searching
-                 * Most Recently Appeares
-                 ! no searching -> returned list from Cubit = quranSuras list (intilized in Model) "holding 114 elements"
-                 * Most Recently doesn't appear
-                 ? searching -> returned list from Cubit = filtered quranSuras relies on searchController "holding filtered elements"
-              */
               BlocBuilder<SuraSearchCubit, SuraSearchState>(
                 builder: (context, state) {
-                  // * scope of UI Rebuilding
                   final suras = (state as SuraSearchLoaded).suras;
                   final isSearching =
                       suras.length !=
                       QuranSuraModel
                           .quranSuras
-                          .length; // * true? -> searching - false? no searching
+                          .length;
                   if (isSearching) {
-                    return SizedBox(); // * Most Recently Disappeared
+                    return SizedBox();
                   }
-                  return MostRecently(); // * Most Recently Appeared
+                  return MostRecently();
                 },
               ),
               SizedBox(height: 10.h),
@@ -63,10 +54,8 @@ class QuranScreen extends StatelessWidget {
               ),
               SizedBox(height: 10.h),
               Expanded(
-                // * UI Rebuilding relies on returned list of SuraSearchLoaded state
                 child: BlocBuilder<SuraSearchCubit, SuraSearchState>(
                   builder: (context, state) {
-                    // * scope of rebuilding
                     final suras = (state as SuraSearchLoaded).suras;
                     return SurasList(suras: suras);
                   },

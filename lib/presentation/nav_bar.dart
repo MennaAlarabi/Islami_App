@@ -10,8 +10,6 @@ import 'package:islami/presentation/screens/time/time_screen.dart';
 class NavBar extends StatefulWidget {
   const NavBar({super.key});
 
-  // static final String routName = 'nav';
-
   @override
   State<NavBar> createState() => _NavBarState();
 }

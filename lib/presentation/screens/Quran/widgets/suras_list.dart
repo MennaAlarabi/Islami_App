@@ -6,7 +6,7 @@ import 'package:islami/presentation/screens/quran/model/quran_sura_model.dart';
 import 'package:islami/presentation/screens/quran/widgets/sura_content.dart';
 
 class SurasList extends StatelessWidget {
-  static final List<int> tappedSura = []; // * holding sura index
+  static final List<int> tappedSura = [];
   final List<QuranSuraModel> suras;
   const SurasList({super.key, required this.suras});
 
@@ -28,7 +28,7 @@ class SurasList extends StatelessWidget {
             );
             BlocProvider.of<MostRecentlyCubit>(
               context,
-            ).getAllSuras(); // * Alooo, wake up, there is a change
+            ).getAllSuras();
           },
           leading: Stack(
             alignment: AlignmentDirectional.center,

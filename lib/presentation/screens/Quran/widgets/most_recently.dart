@@ -14,15 +14,12 @@ class MostRecently extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<MostRecentlyCubit, MostRecentlyState>(
       builder: (context, state) {
-        // * scope of UI Rebuilding
         if (state is MostRecentlyLoaded) {
           final suras = QuranSuraModel.quranSuras;
           if (state.tappedSuras.isEmpty) {
-            // * No tapped suras
             return SizedBox();
           }
           return Column(
-            // * Tapped sura
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
@@ -67,7 +64,7 @@ class MostRecently extends StatelessWidget {
                           );
                           BlocProvider.of<MostRecentlyCubit>(
                             context,
-                          ).getAllSuras(); // * Alooo, wake up, there is a change
+                          ).getAllSuras();
                         },
                         child: Row(
                           children: [

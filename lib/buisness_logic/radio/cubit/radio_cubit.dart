@@ -8,13 +8,13 @@ import 'package:meta/meta.dart';
 part 'radio_state.dart';
 
 class RadioCubit extends Cubit<RadioState> {
-  final RadioRepo radioRepo; //* catch the list of radio's audios
+  final RadioRepo radioRepo;
   final AudioPlayer audioPlayer = AudioPlayer();
   String? _pendingUrl;
 
   RadioCubit(this.radioRepo) : super(RadioInitial());
 
-  Future<void> getRadios() async { //! recieved the data
+  Future<void> getRadios() async {
     emit(RadioLoadingState());
 
     try {
@@ -32,10 +32,9 @@ class RadioCubit extends Cubit<RadioState> {
     }
   }
 
-  Future<void> toggleRadio(String url) async { //! play radio
+  Future<void> toggleRadio(String url) async {
     final currentState = state as RadioLoadedState;
-  //* stop radio
-    if (currentState.currentUrl == url) { //* if the radio is playing stop it
+    if (currentState.currentUrl == url) {
       await audioPlayer.stop();
       _pendingUrl = null;
 
@@ -49,7 +48,6 @@ class RadioCubit extends Cubit<RadioState> {
       );
       return;
     }
-  //* play a radio
     _pendingUrl = url;
     emit(
       RadioLoadedState(
@@ -65,7 +63,7 @@ class RadioCubit extends Cubit<RadioState> {
       await Future.delayed(Duration(milliseconds: 300));
 
       if (_pendingUrl != url) return;
-      await audioPlayer.play(UrlSource(url)); //* playing
+      await audioPlayer.play(UrlSource(url));
 
       if (_pendingUrl != url) return;
 

@@ -13,54 +13,58 @@ class OnBoardingPage extends StatelessWidget {
       globalBackgroundColor: Color(0xff202020),
       globalHeader: Padding(
         padding: const EdgeInsets.only(top: 30.0),
-        child: Image.asset('assets/images/onboarding/islami_top.png', height: 150),
+        child: Image.asset(
+          'assets/images/onboarding/islami_top.png',
+          height: 150,
+        ),
       ),
 
       pages: [
         PageViewModel(
           title: '',
           bodyWidget: OnboardingScreen(
-            image: 'assets/images/onboarding/welcome.png', 
-            title: 'Welcome To Islami App', 
-            body: '', 
-            boxHeight: 50
-          )
+            image: 'assets/images/onboarding/welcome.png',
+            title: 'Welcome To Islami App',
+            body: '',
+            boxHeight: 50,
+          ),
         ),
         PageViewModel(
           title: '',
           bodyWidget: OnboardingScreen(
             image: 'assets/images/onboarding/mosque.png',
             title: 'Welcome To Islami App',
-            body: 'We Are Very Excited To Have You In Our Community', 
+            body: 'We Are Very Excited To Have You In Our Community',
             boxHeight: 30,
-          )
+          ),
         ),
         PageViewModel(
           title: '',
           bodyWidget: OnboardingScreen(
             image: 'assets/images/onboarding/quraan.png',
-            title: 'Reading the Quran', 
-            body: 'Read, and your Lord is the Most Generous', 
+            title: 'Reading the Quran',
+            body: 'Read, and your Lord is the Most Generous',
             boxHeight: 30,
-          )
+          ),
         ),
         PageViewModel(
           title: '',
           bodyWidget: OnboardingScreen(
-            image: 'assets/images/onboarding/doaa.png', 
-            title: 'Bearish', 
-            body: 'Praise the name of your Lord, the Most High', 
+            image: 'assets/images/onboarding/doaa.png',
+            title: 'Bearish',
+            body: 'Praise the name of your Lord, the Most High',
             boxHeight: 30,
-          )
+          ),
         ),
         PageViewModel(
           title: '',
           bodyWidget: OnboardingScreen(
-            image: 'assets/images/onboarding/radio.png', 
-            title: 'Holy Quran Radio', 
-            body: 'You can listen to the Holy Quran Radio through the application for fee and easliy', 
+            image: 'assets/images/onboarding/radio.png',
+            title: 'Holy Quran Radio',
+            body:
+                'You can listen to the Holy Quran Radio through the application for fee and easliy',
             boxHeight: 30,
-          )
+          ),
         ),
       ],
 
@@ -79,7 +83,7 @@ class OnBoardingPage extends StatelessWidget {
         ),
       ),
 
-onDone: () {
+      onDone: () {
         Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(builder: (context) => NavBar()),

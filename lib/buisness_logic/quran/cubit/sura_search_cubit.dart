@@ -7,26 +7,22 @@ class SuraSearchCubit extends Cubit<SuraSearchState> {
   SuraSearchCubit() : super(SuraSearchLoaded(QuranSuraModel.quranSuras));
 
   void getSearchedSuras(String search) {
-    // * searchController
     if (search.isEmpty) {
-      // ! no searching
       emit(
         SuraSearchLoaded(QuranSuraModel.quranSuras),
-      ); // * all sura list - suras (initlized in SuraSearchLoaded) = quranSuras
+      );
     } else {
-      // ? searching - suras (initlized in SuraSearchLoaded) = filtering quranSuras
       emit(
         SuraSearchLoaded(
           QuranSuraModel
-              .quranSuras // * elements that contains ...?
+              .quranSuras
               .where(
-                // * iterable can't return List
                 (sura) =>
-                    sura.arabicName.contains(search) || // * الفاتحه
+                    sura.arabicName.contains(search) ||
                     sura.englishName.toLowerCase().contains(
                       search,
-                    ) || // * Fitiha or fatiha
-                    sura.verses.toString().contains(search), // * 7
+                    ) ||
+                    sura.verses.toString().contains(search), 
               )
               .toList(),
         ),

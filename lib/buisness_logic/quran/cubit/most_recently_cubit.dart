@@ -10,7 +10,7 @@ class MostRecentlyCubit extends Cubit<MostRecentlyState> {
   void getAllSuras() {
     final newList = List<int>.from(
       SurasList.tappedSura,
-    ); // * Copy of tappedSuar List
+    );
     emit(MostRecentlyLoaded(tappedSuras: newList));
   }
 }
