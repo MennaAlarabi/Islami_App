@@ -3,6 +3,7 @@ import 'package:introduction_screen/introduction_screen.dart';
 import 'package:islami/presentation/nav_bar.dart';
 import 'package:islami/presentation/onBoarding/footer.dart';
 import 'package:islami/presentation/onBoarding/onboarding_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class OnBoardingPage extends StatelessWidget {
   const OnBoardingPage({Key? key}) : super(key: key);
@@ -83,7 +84,10 @@ class OnBoardingPage extends StatelessWidget {
         ),
       ),
 
-      onDone: () {
+      onDone: () async {
+        final prefs = await SharedPreferences.getInstance();
+        await prefs.setBool('onboarding_complete', true);
+        
         Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(builder: (context) => NavBar()),
