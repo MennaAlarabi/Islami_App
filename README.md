@@ -1,16 +1,83 @@
-# islami
+# Islami App
 
-A new Flutter project.
+Islami App is a modern Flutter application designed to provide essential Islamic features through a clean, responsive, and user-friendly experience.
 
-## Getting Started
+**This project represents my first complete mobile application built fully by myself**, where I explored real-world Flutter development concepts including API Integration, State Management, Responsive UI Design, and Local File Handling.
 
-This project is a starting point for a Flutter application.
+<p align="center">
+  <img src="https://img.icons8.com/color/96/flutter.png" width="60"/>
+  <img src="https://img.icons8.com/color/96/dart.png" width="60"/>
+</p>
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## ✨ Features
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 📖 Quran Section
+
+* Read Quran Surahs with a clean and simple UI.
+* Local Quran content handling using RootBundle & Assets.
+
+### 📜 Hadith Section
+
+* Browse and read Islamic Hadiths in an organized layout.
+
+### 📿 Sebha Section
+
+* Interactive Tasbih counter with smooth user interaction.
+
+### 📻 Radio & Reciters
+
+* Listen to Quran radio stations and different reciters.
+* Dynamic content fetched using APIs.
+
+### 🕌 Prayer Times
+
+* Display accurate prayer times based on API data.
+* Clean and responsive prayer timings UI.
+
+### 🤲 Azkar Section
+
+* Morning and Evening Azkar with a readable experience.
+
+### 📱 Responsive Design
+
+* Fully responsive UI for multiple screen sizes using ScreenUtil.
+
+### ⚡ State Management
+
+* Smooth and scalable state handling using Cubit (Bloc).
+
+---
+
+## 🛠 Tech Stack
+
+| Layer            | Technology          |
+| ---------------- | ------------------- |
+| Framework        | Flutter             |
+| Language         | Dart                |
+| State Management | Cubit (Bloc)        |
+| Networking       | REST APIs / Dio     |
+| Responsive UI    | ScreenUtil          |
+| Local Storage    | SharedPreferences & RootBundle & Assets |
+
+---
+
+## 📸 Screenshots
+
+<p align="center">
+  
+  <img src="assets/screenshots/sebha_screen.png" width="220">
+  <img src="assets/screenshots/intro_screen.png" width="220">
+  <img src="assets/screenshots/quran_screen.png" width="220">
+  <img src="assets/screenshots/radio_screen.png" width="220">
+  <img src="assets/screenshots/hadeth_screen.png" width="220">
+  <img src="assets/screenshots/time_screen.png" width="220">
+</p>
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a star on GitHub ⭐
+
